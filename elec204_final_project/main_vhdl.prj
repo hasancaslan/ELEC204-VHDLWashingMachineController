@@ -1,0 +1,5 @@
+vhdl work "C:\Users\tamur\elec204_labfinal\washing_machine.vhd"
+vhdl work "C:\Users\tamur\elec204_labfinal\SevSeg_Driver.vhd"
+vhdl work "C:\Users\tamur\elec204_labfinal\SevSeg_Decoder.vhd"
+vhdl work "C:\Users\tamur\elec204_labfinal\clock_divider.vhd"
+vhdl work "C:\Users\tamur\elec204_labfinal\main.vhd"

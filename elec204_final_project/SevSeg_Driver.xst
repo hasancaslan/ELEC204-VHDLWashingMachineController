@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/tamur/elec204_labfinal/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/tamur/elec204_labfinal/xst"
+elaborate
+-ifn SevSeg_Driver.prj
+-ifmt mixed

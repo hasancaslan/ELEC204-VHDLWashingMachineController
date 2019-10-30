@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\tamur\elec204_labfinal\main.ncd
+OUTFILE=C:\Users\tamur\elec204_labfinal\main.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5vq100
+WORKINGDIR=C:\Users\tamur\elec204_labfinal
+LICENSE=WebPack
+USER_INFO=211600718_0_0_730

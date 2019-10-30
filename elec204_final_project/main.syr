@@ -1,0 +1,742 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-vq100
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/tamur/elec204_labfinal/clock_divider.vhd" in Library work.
+Architecture behavioral of Entity clock_divider is up to date.
+Compiling vhdl file "C:/Users/tamur/elec204_labfinal/washing_machine.vhd" in Library work.
+Entity <washing_machine> compiled.
+Entity <washing_machine> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/tamur/elec204_labfinal/SevSeg_Driver.vhd" in Library work.
+Entity <sevseg_driver> compiled.
+Entity <sevseg_driver> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/tamur/elec204_labfinal/SevSeg_Decoder.vhd" in Library work.
+Architecture behavioral of Entity sevseg_decoder is up to date.
+Compiling vhdl file "C:/Users/tamur/elec204_labfinal/main.vhd" in Library work.
+Architecture behavioral of Entity main is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clock_divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <washing_machine> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SevSeg_Driver> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SevSeg_Decoder> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+Entity <main> analyzed. Unit <main> generated.
+
+Analyzing Entity <clock_divider> in library <work> (Architecture <behavioral>).
+Entity <clock_divider> analyzed. Unit <clock_divider> generated.
+
+Analyzing Entity <washing_machine> in library <work> (Architecture <behavioral>).
+Entity <washing_machine> analyzed. Unit <washing_machine> generated.
+
+Analyzing Entity <SevSeg_Driver> in library <work> (Architecture <behavioral>).
+Entity <SevSeg_Driver> analyzed. Unit <SevSeg_Driver> generated.
+
+Analyzing Entity <SevSeg_Decoder> in library <work> (Architecture <behavioral>).
+Entity <SevSeg_Decoder> analyzed. Unit <SevSeg_Decoder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock_divider>.
+    Related source file is "C:/Users/tamur/elec204_labfinal/clock_divider.vhd".
+    Found 19-bit up counter for signal <COUNTER>.
+    Found 19-bit comparator lessequal for signal <COUNTER$cmp_le0000> created at line 44.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Comparator(s).
+Unit <clock_divider> synthesized.
+
+
+Synthesizing Unit <washing_machine>.
+    Related source file is "C:/Users/tamur/elec204_labfinal/washing_machine.vhd".
+WARNING:Xst:1780 - Signal <hz> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 4x4-bit ROM for signal <modes>.
+    Found 32-bit subtractor for signal <counter$addsub0000> created at line 121.
+    Found 32-bit subtractor for signal <counter$addsub0001> created at line 135.
+    Found 32-bit subtractor for signal <counter$addsub0002> created at line 149.
+    Found 32-bit comparator less for signal <counter$cmp_lt0000> created at line 145.
+    Found 32-bit 4-to-1 multiplexer for signal <counter$mux0000> created at line 103.
+    Found 32-bit register for signal <counter$mux0008>.
+    Found 2-bit register for signal <curState>.
+    Found 2-bit adder for signal <curState$addsub0000> created at line 111.
+    Found 1-bit register for signal <hold>.
+    Found 32-bit register for signal <tick>.
+    Found 32-bit adder for signal <tick$addsub0000> created at line 118.
+    Found 32-bit adder for signal <tick$addsub0001> created at line 132.
+    Found 32-bit adder for signal <tick$addsub0002> created at line 146.
+    Found 32-bit comparator less for signal <tick$cmp_lt0000> created at line 117.
+    Found 32-bit comparator less for signal <tick$cmp_lt0001> created at line 131.
+    Found 32-bit 4-to-1 multiplexer for signal <tick$mux0000> created at line 110.
+    Found 32-bit 8-to-1 multiplexer for signal <tick$mux0006>.
+    Found 1-bit register for signal <zero>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  68 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  96 Multiplexer(s).
+Unit <washing_machine> synthesized.
+
+
+Synthesizing Unit <SevSeg_Driver>.
+    Related source file is "C:/Users/tamur/elec204_labfinal/SevSeg_Driver.vhd".
+WARNING:Xst:1780 - Signal <O> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <K> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <B> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8x8-bit ROM for signal <SEV_SEG_DRIVER>.
+    Found 3-bit up counter for signal <COUNTER>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+Unit <SevSeg_Driver> synthesized.
+
+
+Synthesizing Unit <SevSeg_Decoder>.
+    Related source file is "C:/Users/tamur/elec204_labfinal/SevSeg_Decoder.vhd".
+    Found 32x7-bit ROM for signal <SEVSEG_BUS>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <SevSeg_Decoder> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "C:/Users/tamur/elec204_labfinal/main.vhd".
+WARNING:Xst:1780 - Signal <ledOut> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 32x7-bit ROM                                          : 1
+ 4x4-bit ROM                                           : 1
+ 8x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 7
+ 2-bit adder                                           : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 3
+# Counters                                             : 2
+ 19-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 5
+ 1-bit register                                        : 2
+ 2-bit register                                        : 1
+ 32-bit register                                       : 2
+# Comparators                                          : 4
+ 19-bit comparator lessequal                           : 1
+ 32-bit comparator less                                : 3
+# Multiplexers                                         : 3
+ 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 32x7-bit ROM                                          : 1
+ 4x4-bit ROM                                           : 1
+ 8x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 10
+ 2-bit adder                                           : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 6
+# Counters                                             : 2
+ 19-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 68
+ Flip-Flops                                            : 68
+# Comparators                                          : 4
+ 19-bit comparator lessequal                           : 1
+ 32-bit comparator less                                : 3
+# Multiplexers                                         : 3
+ 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Optimizing unit <washing_machine> ...
+
+Optimizing unit <SevSeg_Driver> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 72.
+FlipFlop wsh/curState_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 91
+ Flip-Flops                                            : 91
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 33
+
+Cell Usage :
+# BELS                             : 1504
+#      GND                         : 1
+#      INV                         : 37
+#      LUT1                        : 22
+#      LUT2                        : 83
+#      LUT2_D                      : 31
+#      LUT2_L                      : 5
+#      LUT3                        : 151
+#      LUT3_D                      : 25
+#      LUT3_L                      : 2
+#      LUT4                        : 502
+#      LUT4_D                      : 42
+#      LUT4_L                      : 40
+#      MUXCY                       : 256
+#      MUXF5                       : 95
+#      VCC                         : 1
+#      XORCY                       : 211
+# FlipFlops/Latches                : 91
+#      FD                          : 3
+#      FDE                         : 65
+#      FDR                         : 22
+#      FDS                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 7
+#      OBUF                        : 25
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50avq100-5 
+
+ Number of Slices:                      488  out of    704    69%  
+ Number of Slice Flip Flops:             91  out of   1408     6%  
+ Number of 4 input LUTs:                940  out of   1408    66%  
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of     68    48%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------+------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)  | Load  |
+---------------------------------------------+------------------------+-------+
+Clock                                        | BUFGP                  | 19    |
+hz1(clk/HUNDREDHZCLOCK_cmp_eq0000_wg_cy<4>:O)| BUFG(*)(wsh/tick_31)   | 72    |
+---------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 23.205ns (Maximum Frequency: 43.095MHz)
+   Minimum input arrival time before clock: 25.539ns
+   Maximum output required time after clock: 13.364ns
+   Maximum combinational path delay: 13.542ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 5.049ns (frequency: 198.075MHz)
+  Total number of paths / destination ports: 551 / 38
+-------------------------------------------------------------------------
+Delay:               5.049ns (Levels of Logic = 11)
+  Source:            clk/COUNTER_0 (FF)
+  Destination:       clk/COUNTER_0 (FF)
+  Source Clock:      Clock rising
+  Destination Clock: Clock rising
+
+  Data Path: clk/COUNTER_0 to clk/COUNTER_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.495   0.559  clk/COUNTER_0 (clk/COUNTER_0)
+     LUT3:I0->O            1   0.561   0.000  clk/Mcompar_COUNTER_cmp_le0000_lut<0> (clk/Mcompar_COUNTER_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  clk/Mcompar_COUNTER_cmp_le0000_cy<0> (clk/Mcompar_COUNTER_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  clk/Mcompar_COUNTER_cmp_le0000_cy<1> (clk/Mcompar_COUNTER_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  clk/Mcompar_COUNTER_cmp_le0000_cy<2> (clk/Mcompar_COUNTER_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  clk/Mcompar_COUNTER_cmp_le0000_cy<3> (clk/Mcompar_COUNTER_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  clk/Mcompar_COUNTER_cmp_le0000_cy<4> (clk/Mcompar_COUNTER_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  clk/Mcompar_COUNTER_cmp_le0000_cy<5> (clk/Mcompar_COUNTER_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  clk/Mcompar_COUNTER_cmp_le0000_cy<6> (clk/Mcompar_COUNTER_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  clk/Mcompar_COUNTER_cmp_le0000_cy<7> (clk/Mcompar_COUNTER_cmp_le0000_cy<7>)
+     MUXCY:CI->O           1   0.179   0.357  clk/Mcompar_COUNTER_cmp_le0000_cy<8> (clk/COUNTER_cmp_le0000)
+     INV:I->O             19   0.562   0.922  clk/COUNTER_not00011_INV_0 (clk/COUNTER_not0001)
+     FDR:R                     0.435          clk/COUNTER_0
+    ----------------------------------------
+    Total                      5.049ns (3.210ns logic, 1.839ns route)
+                                       (63.6% logic, 36.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hz1'
+  Clock period: 23.205ns (frequency: 43.095MHz)
+  Total number of paths / destination ports: 106450783 / 140
+-------------------------------------------------------------------------
+Delay:               23.205ns (Levels of Logic = 90)
+  Source:            wsh/tick_10 (FF)
+  Destination:       wsh/curState_0 (FF)
+  Source Clock:      hz1 rising
+  Destination Clock: hz1 rising
+
+  Data Path: wsh/tick_10 to wsh/curState_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.495   0.607  wsh/tick_10 (wsh/tick_10)
+     LUT3:I0->O            1   0.561   0.359  wsh/Mcompar_tick_cmp_lt0000_lut<3>_SW1 (N253)
+     LUT4:I3->O            1   0.561   0.000  wsh/Mcompar_tick_cmp_lt0000_lut<3> (wsh/Mcompar_tick_cmp_lt0000_lut<3>)
+     MUXCY:S->O            1   0.523   0.000  wsh/Mcompar_tick_cmp_lt0000_cy<3> (wsh/Mcompar_tick_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Mcompar_tick_cmp_lt0000_cy<4> (wsh/Mcompar_tick_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Mcompar_tick_cmp_lt0000_cy<5> (wsh/Mcompar_tick_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Mcompar_tick_cmp_lt0000_cy<6> (wsh/Mcompar_tick_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Mcompar_tick_cmp_lt0000_cy<7> (wsh/Mcompar_tick_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Mcompar_tick_cmp_lt0000_cy<8> (wsh/Mcompar_tick_cmp_lt0000_cy<8>)
+     MUXCY:CI->O          78   0.179   1.151  wsh/Mcompar_tick_cmp_lt0000_cy<9> (wsh/Mcompar_tick_cmp_lt0000_cy<9>)
+     LUT2_D:I1->O         21   0.562   0.982  wsh/counter_mux0001<1>31 (wsh/N111)
+     LUT4:I2->O            5   0.561   0.604  wsh/counter_mux0001<16> (wsh/counter_mux0001<16>)
+     LUT4:I1->O            1   0.562   0.000  wsh/counter_cmp_eq0000_wg_lut<1> (wsh/counter_cmp_eq0000_wg_lut<1>)
+     MUXCY:S->O            1   0.523   0.000  wsh/counter_cmp_eq0000_wg_cy<1> (wsh/counter_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<2> (wsh/counter_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<3> (wsh/counter_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<4> (wsh/counter_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<5> (wsh/counter_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<6> (wsh/counter_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O           9   0.179   0.720  wsh/counter_cmp_eq0000_wg_cy<7> (wsh/counter_cmp_eq0000)
+     LUT3:I2->O            1   0.561   0.000  wsh/counter_mux0003<0>11 (wsh/counter_mux0003<0>1)
+     MUXCY:S->O            1   0.523   0.000  wsh/Msub_counter_addsub0001_cy<0> (wsh/Msub_counter_addsub0001_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<1> (wsh/Msub_counter_addsub0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<2> (wsh/Msub_counter_addsub0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<3> (wsh/Msub_counter_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<4> (wsh/Msub_counter_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<5> (wsh/Msub_counter_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<6> (wsh/Msub_counter_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<7> (wsh/Msub_counter_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<8> (wsh/Msub_counter_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<9> (wsh/Msub_counter_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<10> (wsh/Msub_counter_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<11> (wsh/Msub_counter_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<12> (wsh/Msub_counter_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<13> (wsh/Msub_counter_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<14> (wsh/Msub_counter_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<15> (wsh/Msub_counter_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<16> (wsh/Msub_counter_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<17> (wsh/Msub_counter_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<18> (wsh/Msub_counter_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<19> (wsh/Msub_counter_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<20> (wsh/Msub_counter_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<21> (wsh/Msub_counter_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<22> (wsh/Msub_counter_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<23> (wsh/Msub_counter_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<24> (wsh/Msub_counter_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<25> (wsh/Msub_counter_addsub0001_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<26> (wsh/Msub_counter_addsub0001_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<27> (wsh/Msub_counter_addsub0001_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<28> (wsh/Msub_counter_addsub0001_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<29> (wsh/Msub_counter_addsub0001_cy<29>)
+     XORCY:CI->O           3   0.654   0.474  wsh/Msub_counter_addsub0001_xor<30> (wsh/counter_addsub0001<30>)
+     LUT3_D:I2->LO         1   0.561   0.102  wsh/counter_mux0004<30>1 (N501)
+     LUT4:I3->O            3   0.561   0.453  wsh/counter_cmp_eq0001317 (wsh/counter_cmp_eq0001317)
+     LUT4:I3->O            1   0.561   0.359  wsh/counter_cmp_eq0001343_SW0 (N251)
+     LUT4:I3->O            1   0.561   0.000  wsh/counter_mux0006<0>11 (wsh/counter_mux0006<0>1)
+     MUXCY:S->O            1   0.523   0.000  wsh/Msub_counter_addsub0002_cy<0> (wsh/Msub_counter_addsub0002_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<1> (wsh/Msub_counter_addsub0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<2> (wsh/Msub_counter_addsub0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<3> (wsh/Msub_counter_addsub0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<4> (wsh/Msub_counter_addsub0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<5> (wsh/Msub_counter_addsub0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<6> (wsh/Msub_counter_addsub0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<7> (wsh/Msub_counter_addsub0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<8> (wsh/Msub_counter_addsub0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<9> (wsh/Msub_counter_addsub0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<10> (wsh/Msub_counter_addsub0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<11> (wsh/Msub_counter_addsub0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<12> (wsh/Msub_counter_addsub0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<13> (wsh/Msub_counter_addsub0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<14> (wsh/Msub_counter_addsub0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<15> (wsh/Msub_counter_addsub0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<16> (wsh/Msub_counter_addsub0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<17> (wsh/Msub_counter_addsub0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<18> (wsh/Msub_counter_addsub0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<19> (wsh/Msub_counter_addsub0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<20> (wsh/Msub_counter_addsub0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<21> (wsh/Msub_counter_addsub0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<22> (wsh/Msub_counter_addsub0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<23> (wsh/Msub_counter_addsub0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<24> (wsh/Msub_counter_addsub0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<25> (wsh/Msub_counter_addsub0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<26> (wsh/Msub_counter_addsub0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<27> (wsh/Msub_counter_addsub0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<28> (wsh/Msub_counter_addsub0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<29> (wsh/Msub_counter_addsub0002_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  wsh/Msub_counter_addsub0002_cy<30> (wsh/Msub_counter_addsub0002_cy<30>)
+     XORCY:CI->O           2   0.654   0.403  wsh/Msub_counter_addsub0002_xor<31> (wsh/counter_addsub0002<31>)
+     LUT3:I2->O            1   0.561   0.380  wsh/counter_mux0007<31>1 (wsh/counter_mux0007<31>)
+     LUT4:I2->O            1   0.561   0.380  wsh/curState_mux0004<1>150 (wsh/curState_mux0004<1>150)
+     LUT4:I2->O            1   0.561   0.000  wsh/curState_mux0004<1>3901 (wsh/curState_mux0004<1>390)
+     FDS:D                     0.197          wsh/curState_0
+    ----------------------------------------
+    Total                     23.205ns (16.230ns logic, 6.975ns route)
+                                       (69.9% logic, 30.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hz1'
+  Total number of paths / destination ports: 62407189 / 135
+-------------------------------------------------------------------------
+Offset:              25.539ns (Levels of Logic = 88)
+  Source:            userMode<3> (PAD)
+  Destination:       wsh/curState_0 (FF)
+  Destination Clock: hz1 rising
+
+  Data Path: userMode<3> to wsh/curState_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   0.824   1.097  userMode_3_IBUF (userMode_3_IBUF)
+     LUT4:I0->O            1   0.561   0.000  wsh/washC_cmp_eq00011 (wsh/washC_cmp_eq00011)
+     MUXF5:I1->O           5   0.229   0.646  wsh/washC_cmp_eq0001_f5 (wsh/washC_cmp_eq0001)
+     LUT4:I0->O            6   0.561   0.635  wsh/washC_or00001 (wsh/washC_or0000)
+     LUT3:I1->O            7   0.562   0.710  wsh/washC<0>1 (wsh/Msub_counter_addsub0000_dmux_1_cy<0>)
+     LUT4:I0->O            8   0.561   0.666  wsh/counter_mux0001<10>1_SW0 (N129)
+     LUT4_D:I2->O         21   0.561   0.961  wsh/counter_mux0001<10>1_1 (wsh/counter_mux0001<10>1)
+     LUT4:I3->O            5   0.561   0.604  wsh/counter_mux0001<13> (wsh/counter_mux0001<13>)
+     LUT4:I1->O            1   0.562   0.000  wsh/counter_cmp_eq0000_wg_lut<0> (wsh/counter_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  wsh/counter_cmp_eq0000_wg_cy<0> (wsh/counter_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<1> (wsh/counter_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<2> (wsh/counter_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<3> (wsh/counter_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<4> (wsh/counter_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<5> (wsh/counter_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/counter_cmp_eq0000_wg_cy<6> (wsh/counter_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O           9   0.179   0.720  wsh/counter_cmp_eq0000_wg_cy<7> (wsh/counter_cmp_eq0000)
+     LUT3:I2->O            1   0.561   0.000  wsh/counter_mux0003<0>11 (wsh/counter_mux0003<0>1)
+     MUXCY:S->O            1   0.523   0.000  wsh/Msub_counter_addsub0001_cy<0> (wsh/Msub_counter_addsub0001_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<1> (wsh/Msub_counter_addsub0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<2> (wsh/Msub_counter_addsub0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<3> (wsh/Msub_counter_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<4> (wsh/Msub_counter_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<5> (wsh/Msub_counter_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<6> (wsh/Msub_counter_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<7> (wsh/Msub_counter_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<8> (wsh/Msub_counter_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<9> (wsh/Msub_counter_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<10> (wsh/Msub_counter_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<11> (wsh/Msub_counter_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<12> (wsh/Msub_counter_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<13> (wsh/Msub_counter_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<14> (wsh/Msub_counter_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<15> (wsh/Msub_counter_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<16> (wsh/Msub_counter_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<17> (wsh/Msub_counter_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<18> (wsh/Msub_counter_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<19> (wsh/Msub_counter_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<20> (wsh/Msub_counter_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<21> (wsh/Msub_counter_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<22> (wsh/Msub_counter_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<23> (wsh/Msub_counter_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<24> (wsh/Msub_counter_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<25> (wsh/Msub_counter_addsub0001_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<26> (wsh/Msub_counter_addsub0001_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<27> (wsh/Msub_counter_addsub0001_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<28> (wsh/Msub_counter_addsub0001_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0001_cy<29> (wsh/Msub_counter_addsub0001_cy<29>)
+     XORCY:CI->O           3   0.654   0.474  wsh/Msub_counter_addsub0001_xor<30> (wsh/counter_addsub0001<30>)
+     LUT3_D:I2->LO         1   0.561   0.102  wsh/counter_mux0004<30>1 (N501)
+     LUT4:I3->O            3   0.561   0.453  wsh/counter_cmp_eq0001317 (wsh/counter_cmp_eq0001317)
+     LUT4:I3->O            1   0.561   0.359  wsh/counter_cmp_eq0001343_SW0 (N251)
+     LUT4:I3->O            1   0.561   0.000  wsh/counter_mux0006<0>11 (wsh/counter_mux0006<0>1)
+     MUXCY:S->O            1   0.523   0.000  wsh/Msub_counter_addsub0002_cy<0> (wsh/Msub_counter_addsub0002_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<1> (wsh/Msub_counter_addsub0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<2> (wsh/Msub_counter_addsub0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<3> (wsh/Msub_counter_addsub0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<4> (wsh/Msub_counter_addsub0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<5> (wsh/Msub_counter_addsub0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<6> (wsh/Msub_counter_addsub0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<7> (wsh/Msub_counter_addsub0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<8> (wsh/Msub_counter_addsub0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<9> (wsh/Msub_counter_addsub0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<10> (wsh/Msub_counter_addsub0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<11> (wsh/Msub_counter_addsub0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<12> (wsh/Msub_counter_addsub0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<13> (wsh/Msub_counter_addsub0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<14> (wsh/Msub_counter_addsub0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<15> (wsh/Msub_counter_addsub0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<16> (wsh/Msub_counter_addsub0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<17> (wsh/Msub_counter_addsub0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<18> (wsh/Msub_counter_addsub0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<19> (wsh/Msub_counter_addsub0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<20> (wsh/Msub_counter_addsub0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<21> (wsh/Msub_counter_addsub0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<22> (wsh/Msub_counter_addsub0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<23> (wsh/Msub_counter_addsub0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<24> (wsh/Msub_counter_addsub0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<25> (wsh/Msub_counter_addsub0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<26> (wsh/Msub_counter_addsub0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<27> (wsh/Msub_counter_addsub0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<28> (wsh/Msub_counter_addsub0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  wsh/Msub_counter_addsub0002_cy<29> (wsh/Msub_counter_addsub0002_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  wsh/Msub_counter_addsub0002_cy<30> (wsh/Msub_counter_addsub0002_cy<30>)
+     XORCY:CI->O           2   0.654   0.403  wsh/Msub_counter_addsub0002_xor<31> (wsh/counter_addsub0002<31>)
+     LUT3:I2->O            1   0.561   0.380  wsh/counter_mux0007<31>1 (wsh/counter_mux0007<31>)
+     LUT4:I2->O            1   0.561   0.380  wsh/curState_mux0004<1>150 (wsh/curState_mux0004<1>150)
+     LUT4:I2->O            1   0.561   0.000  wsh/curState_mux0004<1>3901 (wsh/curState_mux0004<1>390)
+     FDS:D                     0.197          wsh/curState_0
+    ----------------------------------------
+    Total                     25.539ns (16.948ns logic, 8.591ns route)
+                                       (66.4% logic, 33.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hz1'
+  Total number of paths / destination ports: 2649 / 21
+-------------------------------------------------------------------------
+Offset:              13.364ns (Levels of Logic = 11)
+  Source:            wsh/curState_0 (FF)
+  Destination:       SevSegData<3> (PAD)
+  Source Clock:      hz1 rising
+
+  Data Path: wsh/curState_0 to SevSegData<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             27   0.495   1.180  wsh/curState_0 (wsh/curState_0)
+     LUT2:I0->O            4   0.561   0.565  wsh/Mrom_modes111 (leds_7_OBUF)
+     LUT3:I1->O            1   0.562   0.000  driver/SEV_SEG_DATA<1>51_F (N451)
+     MUXF5:I0->O           2   0.229   0.446  driver/SEV_SEG_DATA<1>51 (driver/SEV_SEG_DATA<1>51)
+     LUT4:I1->O            1   0.562   0.000  driver/SEV_SEG_DATA<1>321_SW0_SW01 (driver/SEV_SEG_DATA<1>321_SW0_SW0)
+     MUXF5:I1->O           2   0.229   0.382  driver/SEV_SEG_DATA<1>321_SW0_SW0_f5 (N419)
+     LUT4:I3->O            1   0.561   0.000  driver/SEV_SEG_DATA<1>321_SW01 (driver/SEV_SEG_DATA<1>321_SW0)
+     MUXF5:I1->O           1   0.229   0.359  driver/SEV_SEG_DATA<1>321_SW0_f5 (N329)
+     LUT4:I3->O           11   0.561   0.901  driver/SEV_SEG_DATA<1>321 (dataSevSeg<1>)
+     LUT4:I0->O            1   0.561   0.000  decoder/Mrom_SEVSEG_BUS3_F (N425)
+     MUXF5:I0->O           1   0.229   0.357  decoder/Mrom_SEVSEG_BUS3 (SevSegData_3_OBUF)
+     OBUF:I->O                 4.396          SevSegData_3_OBUF (SevSegData<3>)
+    ----------------------------------------
+    Total                     13.364ns (9.175ns logic, 4.189ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1815 / 7
+-------------------------------------------------------------------------
+Delay:               13.542ns (Levels of Logic = 11)
+  Source:            userMode<0> (PAD)
+  Destination:       SevSegData<3> (PAD)
+
+  Data Path: userMode<0> to SevSegData<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.824   1.180  userMode_0_IBUF (userMode_0_IBUF)
+     LUT3:I0->O            3   0.561   0.517  driver/SEV_SEG_DATA<0>221 (driver/N02)
+     LUT2:I1->O            1   0.562   0.000  driver/SEV_SEG_DATA<1>1891 (driver/SEV_SEG_DATA<1>1891)
+     MUXF5:I1->O           1   0.229   0.423  driver/SEV_SEG_DATA<1>189_f5 (driver/SEV_SEG_DATA<1>189)
+     LUT2:I1->O            1   0.562   0.000  driver/SEV_SEG_DATA<1>2632 (driver/SEV_SEG_DATA<1>2632)
+     MUXF5:I0->O           1   0.229   0.465  driver/SEV_SEG_DATA<1>263_f5 (driver/SEV_SEG_DATA<1>263)
+     LUT4:I0->O            1   0.561   0.423  driver/SEV_SEG_DATA<1>292 (driver/SEV_SEG_DATA<1>292)
+     LUT4:I1->O           11   0.562   0.901  driver/SEV_SEG_DATA<1>321 (dataSevSeg<1>)
+     LUT4:I0->O            1   0.561   0.000  decoder/Mrom_SEVSEG_BUS3_F (N425)
+     MUXF5:I0->O           1   0.229   0.357  decoder/Mrom_SEVSEG_BUS3 (SevSegData_3_OBUF)
+     OBUF:I->O                 4.396          SevSegData_3_OBUF (SevSegData<3>)
+    ----------------------------------------
+    Total                     13.542ns (9.276ns logic, 4.266ns route)
+                                       (68.5% logic, 31.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.44 secs
+ 
+--> 
+
+Total memory usage is 4566716 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

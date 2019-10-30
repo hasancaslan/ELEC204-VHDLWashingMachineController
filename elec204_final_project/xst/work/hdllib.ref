@@ -1,0 +1,10 @@
+AR washing_machine behavioral C:/Users/tamur/elec204_labfinal/washing_machine.vhd sub00/vhpl01 1545422221
+EN sevseg_decoder NULL C:/Users/tamur/elec204_labfinal/SevSeg_Decoder.vhd sub00/vhpl06 1545422224
+AR main behavioral C:/Users/tamur/elec204_labfinal/main.vhd sub00/vhpl05 1545422227
+AR clock_divider behavioral C:/Users/tamur/elec204_labfinal/clock_divider.vhd sub00/vhpl03 1545422219
+EN sevseg_driver NULL C:/Users/tamur/elec204_labfinal/SevSeg_Driver.vhd sub00/vhpl08 1545422222
+AR sevseg_driver behavioral C:/Users/tamur/elec204_labfinal/SevSeg_Driver.vhd sub00/vhpl09 1545422223
+EN clock_divider NULL C:/Users/tamur/elec204_labfinal/clock_divider.vhd sub00/vhpl02 1545422218
+AR sevseg_decoder behavioral C:/Users/tamur/elec204_labfinal/SevSeg_Decoder.vhd sub00/vhpl07 1545422225
+EN washing_machine NULL C:/Users/tamur/elec204_labfinal/washing_machine.vhd sub00/vhpl00 1545422220
+EN main NULL C:/Users/tamur/elec204_labfinal/main.vhd sub00/vhpl04 1545422226

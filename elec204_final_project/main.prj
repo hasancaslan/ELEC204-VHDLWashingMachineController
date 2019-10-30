@@ -1,0 +1,5 @@
+vhdl work "washing_machine.vhd"
+vhdl work "SevSeg_Driver.vhd"
+vhdl work "SevSeg_Decoder.vhd"
+vhdl work "clock_divider.vhd"
+vhdl work "main.vhd"

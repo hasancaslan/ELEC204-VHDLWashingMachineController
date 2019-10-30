@@ -1,0 +1,109 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf main.ucf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc3s50a,vq100,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |    3.979|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+start          |SevSegData<0>  |   12.784|
+start          |SevSegData<1>  |   13.922|
+start          |SevSegData<2>  |   12.911|
+start          |SevSegData<3>  |   12.832|
+start          |SevSegData<4>  |   12.684|
+start          |SevSegData<5>  |   13.114|
+start          |SevSegData<6>  |   12.562|
+userMode<0>    |SevSegData<0>  |   13.096|
+userMode<0>    |SevSegData<1>  |   14.399|
+userMode<0>    |SevSegData<2>  |   13.246|
+userMode<0>    |SevSegData<3>  |   13.255|
+userMode<0>    |SevSegData<4>  |   13.167|
+userMode<0>    |SevSegData<5>  |   13.280|
+userMode<0>    |SevSegData<6>  |   13.229|
+userMode<1>    |SevSegData<0>  |   12.480|
+userMode<1>    |SevSegData<1>  |   12.950|
+userMode<1>    |SevSegData<2>  |   12.607|
+userMode<1>    |SevSegData<3>  |   12.528|
+userMode<1>    |SevSegData<4>  |   12.078|
+userMode<1>    |SevSegData<5>  |   12.359|
+userMode<1>    |SevSegData<6>  |   11.970|
+userMode<2>    |SevSegData<0>  |   13.474|
+userMode<2>    |SevSegData<1>  |   14.401|
+userMode<2>    |SevSegData<2>  |   13.914|
+userMode<2>    |SevSegData<3>  |   13.923|
+userMode<2>    |SevSegData<4>  |   14.143|
+userMode<2>    |SevSegData<5>  |   14.411|
+userMode<2>    |SevSegData<6>  |   13.086|
+userMode<3>    |SevSegData<0>  |   13.392|
+userMode<3>    |SevSegData<1>  |   14.319|
+userMode<3>    |SevSegData<2>  |   13.832|
+userMode<3>    |SevSegData<3>  |   13.841|
+userMode<3>    |SevSegData<4>  |   14.061|
+userMode<3>    |SevSegData<5>  |   14.329|
+userMode<3>    |SevSegData<6>  |   13.004|
+userMode<4>    |SevSegData<0>  |   12.522|
+userMode<4>    |SevSegData<1>  |   13.825|
+userMode<4>    |SevSegData<2>  |   12.672|
+userMode<4>    |SevSegData<3>  |   12.681|
+userMode<4>    |SevSegData<4>  |   12.593|
+userMode<4>    |SevSegData<5>  |   12.706|
+userMode<4>    |SevSegData<6>  |   12.655|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Dec 21 22:57:37 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4538 MB
+
+
+

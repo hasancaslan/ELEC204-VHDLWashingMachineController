@@ -1,0 +1,35 @@
+V3 19
+FL C:/Users/tamur/elec204_labfinal/clock_divider.vhd 2018/12/21.22:19:10 P.20131013
+EN work/clock_divider 1545422218 \
+      FL C:/Users/tamur/elec204_labfinal/clock_divider.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/clock_divider/Behavioral 1545422219 \
+      FL C:/Users/tamur/elec204_labfinal/clock_divider.vhd EN work/clock_divider 1545422218
+FL C:/Users/tamur/elec204_labfinal/main.vhd 2018/12/21.22:30:07 P.20131013
+EN work/main 1545422226 FL C:/Users/tamur/elec204_labfinal/main.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/main/Behavioral 1545422227 \
+      FL C:/Users/tamur/elec204_labfinal/main.vhd EN work/main 1545422226 \
+      CP clock_divider CP washing_machine CP SevSeg_Driver CP SevSeg_Decoder
+FL C:/Users/tamur/elec204_labfinal/SevSeg_Decoder.vhd 2018/12/21.22:33:30 P.20131013
+EN work/SevSeg_Decoder 1545422224 \
+      FL C:/Users/tamur/elec204_labfinal/SevSeg_Decoder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/SevSeg_Decoder/BEHAVIORAL 1545422225 \
+      FL C:/Users/tamur/elec204_labfinal/SevSeg_Decoder.vhd \
+      EN work/SevSeg_Decoder 1545422224
+FL C:/Users/tamur/elec204_labfinal/SevSeg_Driver.vhd 2018/12/21.22:56:29 P.20131013
+EN work/SevSeg_Driver 1545422222 \
+      FL C:/Users/tamur/elec204_labfinal/SevSeg_Driver.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/SevSeg_Driver/BEHAVIORAL 1545422223 \
+      FL C:/Users/tamur/elec204_labfinal/SevSeg_Driver.vhd EN work/SevSeg_Driver 1545422222
+FL C:/Users/tamur/elec204_labfinal/washing_machine.vhd 2018/12/21.22:56:48 P.20131013
+EN work/washing_machine 1545422220 \
+      FL C:/Users/tamur/elec204_labfinal/washing_machine.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/washing_machine/Behavioral 1545422221 \
+      FL C:/Users/tamur/elec204_labfinal/washing_machine.vhd \
+      EN work/washing_machine 1545422220

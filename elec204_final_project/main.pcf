@@ -1,0 +1,40 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 21 22:57:19 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SevSegDriver<0>" LOCATE = SITE "P50" LEVEL 1;
+COMP "SevSegDriver<1>" LOCATE = SITE "P49" LEVEL 1;
+COMP "SevSegDriver<2>" LOCATE = SITE "P52" LEVEL 1;
+COMP "SevSegDriver<3>" LOCATE = SITE "P56" LEVEL 1;
+COMP "SevSegDriver<4>" LOCATE = SITE "P59" LEVEL 1;
+COMP "SevSegDriver<5>" LOCATE = SITE "P57" LEVEL 1;
+COMP "SevSegDriver<6>" LOCATE = SITE "P60" LEVEL 1;
+COMP "SevSegDriver<7>" LOCATE = SITE "P61" LEVEL 1;
+COMP "userMode<0>" LOCATE = SITE "P90" LEVEL 1;
+COMP "userMode<1>" LOCATE = SITE "P88" LEVEL 1;
+COMP "userMode<2>" LOCATE = SITE "P85" LEVEL 1;
+COMP "userMode<3>" LOCATE = SITE "P82" LEVEL 1;
+COMP "userMode<4>" LOCATE = SITE "P78" LEVEL 1;
+COMP "Clock" LOCATE = SITE "P40" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "P16" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "P13" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "P6" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "P3" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "P93" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "P89" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "P86" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "P84" LEVEL 1;
+COMP "leds<8>" LOCATE = SITE "P83" LEVEL 1;
+COMP "leds<9>" LOCATE = SITE "P77" LEVEL 1;
+COMP "reset" LOCATE = SITE "P35" LEVEL 1;
+COMP "start" LOCATE = SITE "P15" LEVEL 1;
+COMP "SevSegData<0>" LOCATE = SITE "P64" LEVEL 1;
+COMP "SevSegData<1>" LOCATE = SITE "P98" LEVEL 1;
+COMP "SevSegData<2>" LOCATE = SITE "P73" LEVEL 1;
+COMP "SevSegData<3>" LOCATE = SITE "P72" LEVEL 1;
+COMP "SevSegData<4>" LOCATE = SITE "P65" LEVEL 1;
+COMP "SevSegData<5>" LOCATE = SITE "P62" LEVEL 1;
+COMP "SevSegData<6>" LOCATE = SITE "P71" LEVEL 1;
+SCHEMATIC END;
+
